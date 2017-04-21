@@ -1,8 +1,6 @@
 
 
-source("C:/Users/d.tebeest/Google Drive/Werk/GitHub/BootPredError/BootPredError.R")
-source("BootPredError.R")
-
+source("BootPredError.R") #insert file path
 
 ####################################################
 #--Simulated some survival data, replace these by real data
