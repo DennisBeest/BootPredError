@@ -19,7 +19,7 @@ BootPredError <- function(PenData=NULL,Y,UnPenData=NULL,NBoot=1000,family="cox",
 	#PenData is the data matrix that needs penalisation
 	#UnPenData is the data matrix that is unpenalisation
 	#NBoot = the number of bootstraps
-	#family = "cox" or "binomial, as usual with glmnet, glm, coxph is used for low for survival if PenData = NULL
+	#family = "cox" or "binomial, as usual with glmnet. If PenData = NULL then glm/coxph are used 
 	#alphaIn is the alpha of glmnet
 	#Lambda is the lambda for glmnet
 	#setseed1 set seeds of cv.glmnet
