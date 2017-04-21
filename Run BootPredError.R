@@ -50,8 +50,8 @@ example6 <- BootPredError(UnPenData=UnPen,Y=Survival,family="binomial")
 
 example1 <- BootPredError(PenData=Train,Y=Surv(Time,Survival),family="cox",outBig=1)
 
-example1$EffectiveBoot 		#Safety check. If data is unbalanced data one bootstrap may not contain enough cases, and the AUC is set to NA. EffectiveBoot = NBoot-number of NA's.
-example1$InBagSamples		  #Matrix containing the indexes of the cases that were in a particular bootstrap
+example1$EffectiveBoot    #Safety check. If data is unbalanced data one bootstrap may not contain enough cases, and the AUC is set to NA. EffectiveBoot = NBoot-number of NA's.
+example1$InBagSamples     #Matrix containing the indexes of the cases that were in a particular bootstrap
 example1$PredictionsOOB		#Average oob-prediction per sample
 example1$PredInBag		    #InBag predictions, in same order as InBagSamples
 example1$PredOOB		    	#oob predictions per bootstrap, e.g. rowMeans(example1$PredOOB,na.rm=TRUE) == example1$PredictionsOOB
