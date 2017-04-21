@@ -17,7 +17,7 @@ library(boot)
 BootPredError <- function(PenData=NULL,Y,UnPenData=NULL,NBoot=1000,family="cox",outBig=0,alphaIn=0,Lambda=NULL,setseed1=100,setseed2=0,iAUCtmax=5,BootLab=FALSE)
 {
 	#PenData is the data matrix that needs penalisation
-	#UnPenData is the data matrix that is unpenalisation
+	#UnPenData is the data frame that is unpenalized. By default the matrix is used as it is, dummy variables need to be created before running the file.
 	#NBoot = the number of bootstraps
 	#family = "cox" or "binomial, as usual with glmnet. If PenData = NULL then glm/coxph are used 
 	#alphaIn is the alpha of glmnet
