@@ -28,9 +28,9 @@ example1 <- BootPredError(PenData=Train,Y=Surv(Time,Survival),family="cox")
 example2 <- BootPredError(PenData=Train,UnPenData=UnPen,Y=Surv(Time,Survival),family="cox")
 example3 <- BootPredError(UnPenData=UnPen,Y=Surv(Time,Survival),family="cox")
 
-example1$Lambda 	#lambda used
+example1$Lambda #lambda used
 example1$Means 	#oob-auc for the bootstrap, bootstrap632, bootstrap632+, and apparent error
-example1$CIs	#95% CI's of auc estimates
+example1$CIs	  #95% CI's of auc estimates
 
 
 ####################################################
@@ -51,13 +51,13 @@ example6 <- BootPredError(UnPenData=UnPen,Y=Survival,family="binomial")
 example1 <- BootPredError(PenData=Train,Y=Surv(Time,Survival),family="cox",outBig=1)
 
 example1$EffectiveBoot 		#Safety check. If data is unbalanced data one bootstrap may not contain enough cases, and the AUC is set to NA. EffectiveBoot = NBoot-number of NA's.
-example1$InBagSamples		#Matrix containing the indexes of the cases that were in a particular bootstrap
+example1$InBagSamples		  #Matrix containing the indexes of the cases that were in a particular bootstrap
 example1$PredictionsOOB		#Average oob-prediction per sample
-example1$PredInBag		#InBag predictions, in same order as InBagSamples
-example1$PredOOB			#oob predictions per bootstrap, e.g. rowMeans(example1$PredOOB,na.rm=TRUE) == example1$PredictionsOOB
-example1$CIBase			#Size of the confidence interval
-example1$AUCInBag			#Inbag AUC per bootstrap
-example1$RealModel		#This is the "real" model that is being bootstrapped
-example1$LPModel			#Linear predictor of the RealModel
+example1$PredInBag		    #InBag predictions, in same order as InBagSamples
+example1$PredOOB		    	#oob predictions per bootstrap, e.g. rowMeans(example1$PredOOB,na.rm=TRUE) == example1$PredictionsOOB
+example1$CIBase		      	#Size of the confidence interval
+example1$AUCInBag		    	#Inbag AUC per bootstrap
+example1$RealModel	    	#This is the "real" model that is being bootstrapped
+example1$LPModel		    	#Linear predictor of the RealModel
 
 
