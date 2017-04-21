@@ -58,6 +58,6 @@ example1$PredOOB          #oob predictions per bootstrap, e.g. rowMeans(example1
 example1$CIBase           #Size of the confidence interval
 example1$AUCInBag         #Inbag AUC per bootstrap
 example1$RealModel        #This is the "real" model that is being bootstrapped
-example1$LPModel        #Linear predictor of the RealModel
+example1$LPModel          #Linear predictor of the RealModel
 
 
