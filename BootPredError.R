@@ -37,7 +37,7 @@ BootPredError <- function(PenData=NULL,Y,UnPenData=NULL,NBoot=1000,family="cox",
 		if(!class(PenData)=="matrix") print("make PenData a matrix")
 
 		##############################################
-		#--Size of the data
+		#--Size of the penalized data
 
 		P <- dim(PenData)[2]
 		N <- dim(PenData)[1]
@@ -50,7 +50,7 @@ BootPredError <- function(PenData=NULL,Y,UnPenData=NULL,NBoot=1000,family="cox",
 		penfac <- c(rep(0,times=PUnpen),rep(1,times=P))
 
 		##############################################
-		#--This finds the best lambda. Here the average across 5 fits (for a slighlty better estimate), this could also be done once
+		#--This finds the best lambda. Here the average across 5 fits (for a slighlty better estimate), this could also be done once it 5 takes takes too long
 
 		if(is.null(Lambda))
 		{
