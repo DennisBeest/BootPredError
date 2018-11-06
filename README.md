@@ -6,7 +6,7 @@ BootPredError.R contains the main function that does the bootstrapping.
 
 Run BootPredError.R contains gives some examples on how to run the function.
 
-Paper link:
+Paper link: \newline
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5601734/
 
 Supplementary information:
